@@ -1,0 +1,12 @@
+<% content_for :head do %>
+<%= javascript_include_tag params[:controller] -%>
+<% end %>
+
+<h1>Test jQuery</h1>
+<p>.........</p>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    alert($('p').text());
+  });
+</script>
