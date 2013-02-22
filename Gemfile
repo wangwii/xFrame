@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+#source 'https://rubygems.org'
+source 'http://ruby.taobao.org/'
 
 gem 'x_auth', path: '../xAuth'
 
@@ -8,6 +9,8 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'activerecord-jdbcsqlite3-adapter'
+gem "activerecord-jdbcmysql-adapter"
+gem "activerecord-oracle_enhanced-adapter"
 
 gem 'jruby-openssl'
 

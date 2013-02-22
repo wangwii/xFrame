@@ -5,8 +5,26 @@
 # gem 'activerecord-jdbcsqlite3-adapter'
 #
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  #adapter: sqlite3
+  #database: db/development.sqlite3
+
+  #adapter: jdbcmysql
+  #host: 172.16.40.120
+  #database: xframe
+  #username: demo
+  #password: 123456
+
+  adapter: oracle_enhanced
+  host: 172.16.40.27
+  database: xe
+  username: pingancgx
+  password: 396223
+
+#  adapter: oracle
+#  username: pingancgx
+#  password: 396223
+#  driver: oracle.jdbc.driver.OracleDriver
+#  url: jdbc:oracle:thin:@172.16.40.27:1521:xe
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

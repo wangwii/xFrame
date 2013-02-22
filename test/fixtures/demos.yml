@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: Wangwei
+  age: 1
+  sex: M
+
+two:
+  name: Daochuan
+  age: 1
+  sex: F
