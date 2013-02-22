@@ -1,0 +1,2 @@
+module XAuth::MainHelper
+end
