@@ -1,4 +1,10 @@
 XFrame::Application.routes.draw do
+
+  resources :demos
+
+
+  mount XAuth::Engine => "/auth"
+
   get "main/index"
 
   # The priority is based upon order of creation:

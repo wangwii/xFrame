@@ -1,12 +1,42 @@
 <% content_for :head do %>
-<%= javascript_include_tag params[:controller] -%>
+  <%= javascript_include_tag params[:controller] -%>
 <% end %>
 
 <h1>Test jQuery</h1>
 <p>.........</p>
+<%= link_to '权限管理', '/auth' -%>
+<br/>
+<%= link_to 'Demo List', '/demos' -%>
 
 <script type="text/javascript">
   $(document).ready(function(){
-    alert($('p').text());
+    //alert($('p').text());
   });
 </script>
+
+<h1>Listing demos</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>sex</th>
+    <th>age</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @list.each do |item| %>
+    <tr>
+      <td><%= item.name -%></td>
+      <td><%= item.sex -%></td>
+      <td><%= item.age -%></td>
+
+      <td><%= link_to 'Show', item %></td>
+      <td><%= link_to 'Edit', edit_demo_path(item) %></td>
+      <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+
