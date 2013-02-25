@@ -1,29 +1,33 @@
-<%= form_for(@demo) do |f| %>
+<%= form_for(@demo, html: {class: 'form-horizontal'}) do |f| %>
   <% if @demo.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@demo.errors.count, "error") %> prohibited this demo from being saved:</h2>
 
       <ul>
-      <% @demo.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @demo.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+  <div class="control-group">
+    <%= f.label(:name, class: 'control-label') %>
+    <div class="controls">
+      <%= f.text_field :name %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :age %><br />
-    <%= f.number_field :age %>
+
+  <div class="control-group">
+    <%= f.label(:age, class: 'control-label') %>
+    <div class="controls"><%= f.number_field :age %></div>
   </div>
-  <div class="field">
-    <%= f.label :sex %><br />
-    <%= f.text_field :sex %>
+  <div class="control-group">
+    <%= f.label(:sex, class: 'control-label') %>
+    <div class="controls"><%= f.text_field :sex %></div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">Save changes</button>
+    <a href="<%= demos_path -%>" class="btn">返回</a>
   </div>
 <% end %>

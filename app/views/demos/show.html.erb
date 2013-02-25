@@ -15,6 +15,7 @@
   <%= @demo.sex %>
 </p>
 
-
-<%= link_to 'Edit', edit_demo_path(@demo) %> |
-<%= link_to 'Back', demos_path %>
+<p>
+  <a href="<%= edit_demo_path(@demo) -%>" class="btn btn-primary btn-large">编辑</a>
+  <a href="<%= demos_path -%>" class="btn btn-primary btn-large">返回</a>
+</p>

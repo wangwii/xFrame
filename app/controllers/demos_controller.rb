@@ -3,6 +3,7 @@ class DemosController < ApplicationController
   # GET /demos.json
   def index
     @demos = Demo.all
+    @usermanger = true
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +15,7 @@ class DemosController < ApplicationController
   # GET /demos/1.json
   def show
     @demo = Demo.find(params[:id])
+    @usermanger = true
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +27,7 @@ class DemosController < ApplicationController
   # GET /demos/new.json
   def new
     @demo = Demo.new
+    @usermanger = true
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +38,7 @@ class DemosController < ApplicationController
   # GET /demos/1/edit
   def edit
     @demo = Demo.find(params[:id])
+    @usermanger = true
   end
 
   # POST /demos
