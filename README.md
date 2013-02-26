@@ -47,6 +47,15 @@ For Oracle database
     username: u-name
     password: passwd
 
+
+- - - - - - - - - - - - - - - - - - - - - -
+UI 层框架选择
+=======
+针对javascript，jQuery是不二之选，在rails创建一个新的App默认就包括了jQuery，开箱即用。
+CSS框架的选择，未做过多研究和比较，选择Bootstrap来用，看重的是它的社区活跃度和与jQuery的完整整合。
+Bootstrap要整合到Rails之 Assets pipeline 里需要[twitter-bootstrap-rails](https://github.com/seyhunak/twitter-bootstrap-rails) gem包的支持，该包需要借助Less技术定制Bootstrap，当前未对Less进行过多研究。
+
+
 - - - - - - - - - - - - - - - - - - - - - -
 
 模块化支持
